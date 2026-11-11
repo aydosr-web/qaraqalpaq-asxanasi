@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="kaa"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'primary-fixed-dim': '#e9c349', 'inverse-surface': '#ece0d9', 'surface-variant': '#3a342f', 'secondary-fixed-dim': '#eec14a', 'on-tertiary-container': '#584200', 'surface-container-highest': '#3a342f', 'secondary-fixed': '#ffdf97', 'surface-container-low': '#201b16', 'on-tertiary-fixed': '#251a00', 'primary': '#f2ca50', 'outline': '#99907c', 'surface-container-lowest': '#120d09', 'surface-container': '#241f1a', 'on-secondary-fixed': '#251a00', 'surface-tint': '#e9c349', 'on-primary': '#3c2f00', 'tertiary-container': '#d9ad39', 'primary-container': '#d4af37', 'on-secondary': '#3e2e00', 'primary-fixed': '#ffe088', 'on-surface-variant': '#d0c5af', 'on-error': '#690005', 'secondary': '#eec14a', 'surface': '#17120e', 'tertiary': '#f7c852', 'secondary-container': '#b38b12', 'on-tertiary': '#3e2e00', 'surface-container-high': '#2f2924', 'on-surface': '#ece0d9', 'outline-variant': '#4d4635', 'on-primary-container': '#554300', 'surface-bright': '#3f3833', 'on-background': '#ece0d9', 'on-primary-fixed-variant': '#574500', 'on-error-container': '#ffdad6', 'on-secondary-fixed-variant': '#5a4400', 'inverse-primary': '#735c00', 'background': '#17120e', 'on-tertiary-fixed-variant': '#5a4300', 'surface-dim': '#17120e', 'error-container': '#93000a', 'inverse-on-surface': '#352f2a', 'tertiary-fixed-dim': '#eec14b', 'on-secondary-container': '#362800', 'on-primary-fixed': '#241a00', 'error': '#ffb4ab', 'tertiary-fixed': '#ffdf98' }, 'borderRadius': { 'DEFAULT': '1rem', 'lg': '2rem', 'xl': '3rem', 'full': '9999px' }, 'spacing': { 'space-lg': '2rem', 'gutter': '1.5rem', 'space-md': '1.25rem', 'space-xl': '3.5rem', 'space-xs': '0.375rem', 'gutter-mobile': '1rem', 'margin-mobile': '1.25rem', 'space-sm': '0.75rem', 'margin': '3rem' }, 'fontFamily': { 'body-lg': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Playfair Display'], 'title-md': ['Plus Jakarta Sans'], 'headline-lg': ['Playfair Display'], 'label-md': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Playfair Display'], 'label-lg': ['Plus Jakarta Sans'], 'headline-sm': ['Playfair Display'], 'headline-md': ['Playfair Display'], 'title-lg': ['Plus Jakarta Sans'], 'display-lg': ['Playfair Display'], 'label-sm': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'] }, 'fontSize': { 'body-lg': ['16px', { 'lineHeight': '26px', 'fontWeight': '400' }], 'body-md': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'display-lg-mobile': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'title-md': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'headline-lg': ['40px', { 'lineHeight': '48px', 'letterSpacing': '-0.01em', 'fontWeight': '500' }], 'label-md': ['12px', { 'lineHeight': '16px', 'letterSpacing': '0.06em', 'fontWeight': '600' }], 'headline-lg-mobile': ['28px', { 'lineHeight': '36px', 'letterSpacing': '0em', 'fontWeight': '500' }], 'label-lg': ['14px', { 'lineHeight': '20px', 'letterSpacing': '0.04em', 'fontWeight': '600' }], 'headline-sm': ['22px', { 'lineHeight': '28px', 'fontWeight': '600' }], 'headline-md': ['28px', { 'lineHeight': '36px', 'fontWeight': '500' }], 'title-lg': ['18px', { 'lineHeight': '26px', 'letterSpacing': '0.01em', 'fontWeight': '600' }], 'display-lg': ['56px', { 'lineHeight': '64px', 'letterSpacing': '-0.02em', 'fontWeight': '600' }], 'label-sm': ['10px', { 'lineHeight': '14px', 'letterSpacing': '0.08em', 'fontWeight': '700' }], 'body-sm': ['12px', { 'lineHeight': '18px', 'fontWeight': '400' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary/20 selection:text-primary"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.4)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><button aria-label="Artqa" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><img alt="QARAQALPAQ ASXANASI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCT15Ek3H9BsF4g-4IVqYTQHA0OIQwn5ETFCd-db23BYA19SQVzWX8tIPAwIs5np7s0fnGi_qbCkxgGWt3SeJZbmtfZIzA0bZoQDSIZTZOifpNc6rZ1aUXh_VhDlFvb-75iY082KYytwBbVSOrHXFVVnnFKBB-rrUcovCZShC65f1gCRaFNu4W5bHtYPXmhmzOy52PkOnuIUkCzKRheuybKUBXZgWKia1rReWfbbUg"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Awqat Tolıq Maǵlıwmatı</h1></div><div class="flex items-center gap-space-xs"><button class="flex items-center justify-center p-0.5 rounded-full hover:opacity-90 transition-opacity ring-1 ring-primary/30"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWIz3sjv50nse8M82esFI0K7yVj8z-h0ysVGbMK5GbLJzDH9PcA0QrW624JfC4Xas_98zVG0coIymDZnOqzAGbLPC3_IaOWBeV8O2__mVUcveqbFstWPqiEDUwEf_Qw-6Rt62tQKVJhdgdgl_g0U1162Bkc7nCyXu11NyjzCL88DTfm2YYs9e8wTlwMdIi-nD4CImQ6PMRPMUEWbB96WoMR0UiIJ9rd13gtCCATM"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen pb-safe"><div class="flex flex-col w-full pb-32">
+<!-- Immersive Dish Gallery / Hero -->
+<div class="relative w-full aspect-[4/3] max-h-96 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover select-none" data-alt="Mouthwatering close-up of authentic Karakalpak Beshbarmak served on an artisan dark stoneware plate, featuring delicate hand-rolled pasta sheets, tender braised prime beef cuts and sliced horse meat sausage Qazi, dressed with glistening onion and herb broth, sprinkled with ruby pomegranate arils and tender microgreens, soft golden restaurant ambient lighting, Michelin star food photography aesthetic, 8k resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC98tpPxVuudDArU1CpwbkFcanKtpHGxlH_AsH99V-t4kBprTKSvJbQgs4E26gW7Np6LBGmZxa1acLt7Hxe26roKK5PT1gSxZIW8TVwlpHHHiTrChNSqJZ_h1_woJTUEGrM7lbtoUsPDoWTV95vI08pM3tdTyvnKvrFiNlv2aiUKDIGg_1BqXIK0KglH2uLkYdpdNcwbef1m8YM8lDcip2dxVHWeuewsClDonruuvQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/70 via-transparent to-transparent"></div>
+<!-- Floating Top Utility Badges & Actions -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-2 pointer-events-auto">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-lg shadow-primary/20 flex items-center gap-1.5 backdrop-blur-md">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+          ASPÁZ USINISÍ
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high/90 text-primary-fixed font-label-sm text-label-sm uppercase tracking-widest backdrop-blur-md">
+          100% HALAL
+        </span>
+</div>
+<div class="flex items-center gap-2 pointer-events-auto">
+<button aria-label="Súyiklilerge qosıw" class="w-10 h-10 rounded-full bg-surface-container-high/80 text-on-surface backdrop-blur-md flex items-center justify-center transition-all active:scale-90 hover:text-error" id="favorite-btn">
+<span class="material-symbols-outlined text-[20px]" id="favorite-icon">favorite_border</span>
+</button>
+<button aria-label="Bólisiw" class="w-10 h-10 rounded-full bg-surface-container-high/80 text-on-surface backdrop-blur-md flex items-center justify-center transition-all active:scale-90 hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Subtle Dish Micro-Meta Tag Overlay -->
+<div class="absolute bottom-4 left-4 flex items-center gap-2">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-md text-label-md shadow-md">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-on-surface font-title-md">4.95</span>
+<span class="text-on-surface-variant font-body-sm">(340 baha)</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-label-md text-label-md shadow-md">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>22 minut</span>
+</div>
+</div>
+</div>
+<!-- Primary Content Container -->
+<div class="px-gutter-mobile flex flex-col gap-space-lg -mt-3 relative z-10">
+<!-- Title & Price Block -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex items-start justify-between gap-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">
+          Qaraqalpaqsha Besbarmaq
+        </h1>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-title-lg text-title-lg text-primary tracking-tight font-bold">85 000</span>
+<span class="font-body-md text-body-md text-on-surface-variant">som</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+        QARAQALPAQ ASXANASI restoranınıń eń sara milliy gáwharı. Qolda jayılǵan jumsaq qamır, saylanǵan jılqı hám qara mal góshiniń uzaq qaynatılǵan dámli bólekleri, ashshılanǵan piyazlı tuzlıq hám xosh iyisli sorpa menen usınıladı.
+      </p>
+</div>
+<!-- Nutritional & Sensory Metrics Strip -->
+<div class="grid grid-cols-4 gap-2 bg-surface-container-low p-3.5 rounded-lg shadow-md">
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">scale</span>
+<span class="font-title-md text-title-md text-on-surface">450 g</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-0.5">PORCIYA</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1 bg-surface-container/60 rounded">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">local_fire_department</span>
+<span class="font-title-md text-title-md text-on-surface">620</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-0.5">KKAL</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">fitness_center</span>
+<span class="font-title-md text-title-md text-on-surface">48 g</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-0.5">AQWIL</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1 bg-surface-container/60 rounded">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">nest_clock_farsight_analog</span>
+<span class="font-title-md text-title-md text-on-surface">~22m</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-0.5">WAQÍT</span>
+</div>
+</div>
+<!-- Decorative Traditional Motif Accent -->
+<div class="w-full flex items-center justify-center gap-3 opacity-30 my-[-6px]">
+<div class="h-[1px] flex-1 bg-primary"></div>
+<span class="text-primary font-serif text-[13px] tracking-widest uppercase">✦ ✤ ✦</span>
+<div class="h-[1px] flex-1 bg-primary"></div>
+</div>
+<!-- Add-ons Selection Section -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Qosımshalar</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-0.5 rounded-full">Qálew boyınsha</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant -mt-1.5">Awqattı óz qálewińizge sáykeslestiriń</p>
+<div class="flex flex-col gap-2.5 mt-1" id="addons-list">
+<!-- Addon 1: Checked by default -->
+<label class="addon-item flex items-center justify-between p-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer select-none shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<input checked="" class="addon-checkbox peer hidden" data-price="8000" type="checkbox"/>
+<div class="w-5 h-5 rounded flex items-center justify-center bg-surface-container-highest peer-checked:bg-primary transition-colors text-surface">
+<span class="material-symbols-outlined text-[16px] font-bold text-on-primary checkmark">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Qosımsha súzbe hám ashshı-dushshı</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Arnawlı mayin ashshı-dushshı...</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary whitespace-nowrap ml-3">+8 000 som</span>
+</label>
+<!-- Addon 2: Checked by default -->
+<label class="addon-item flex items-center justify-between p-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer select-none shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<input checked="" class="addon-checkbox peer hidden" data-price="6000" type="checkbox"/>
+<div class="w-5 h-5 rounded flex items-center justify-center bg-surface-container-highest peer-checked:bg-primary transition-colors text-surface">
+<span class="material-symbols-outlined text-[16px] font-bold text-on-primary checkmark">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Bódene máyegi (2 dana)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Dámlewishler menen qaynatılǵan</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary whitespace-nowrap ml-3">+6 000 som</span>
+</label>
+<!-- Addon 3: Unchecked -->
+<label class="addon-item flex items-center justify-between p-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer select-none shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<input class="addon-checkbox peer hidden" data-price="25000" type="checkbox"/>
+<div class="w-5 h-5 rounded flex items-center justify-center bg-surface-container-highest peer-checked:bg-primary transition-colors text-surface">
+<span class="material-symbols-outlined text-[16px] font-bold text-on-primary checkmark opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Qazı bólekleri (50g)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Arnawlı tandırda pisirilgen jılqı g...</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary whitespace-nowrap ml-3">+25 000 som</span>
+</label>
+<!-- Addon 4: Unchecked -->
+<label class="addon-item flex items-center justify-between p-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer select-none shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<input class="addon-checkbox peer hidden" data-price="5000" type="checkbox"/>
+<div class="w-5 h-5 rounded flex items-center justify-center bg-surface-container-highest peer-checked:bg-primary transition-colors text-surface">
+<span class="material-symbols-outlined text-[16px] font-bold text-on-primary checkmark opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Tandır kúlshanan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Issı, qarasire sepilgen jumsaq nan</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary whitespace-nowrap ml-3">+5 000 som</span>
+</label>
+</div>
+</div>
+<!-- Special Request / Chef's Note -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-on-surface flex items-center gap-2" for="order-note">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+          Aspazǵa arnawlı tilekler
+        </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qálew boyınsha</span>
+</div>
+<div class="relative w-full">
+<textarea class="w-full bg-surface-container p-3.5 rounded-lg text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors resize-none shadow-inner" id="order-note" placeholder="Mısalı: piyaz azıraq bolsın, tuzlıq bólek ıdısta berilsin..." rows="2"></textarea>
+</div>
+</div>
+<!-- Chef Signature Assurance Card -->
+<div class="flex items-center gap-3.5 p-4 rounded-lg bg-surface-container-low shadow-sm mb-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Distinguished Karakalpak Master Chef in crisp black modern chef coat, warm friendly expression, high end culinary portrait photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-2k9fFRf-icpUzXfDkWor8DYMai-nD60cTO8dQSZTOFc4ws-mmvwTMmE2aapMno_hOIVGa3B_x6rbuyL0PiBdb49v21rIGixcxYyjpjakMlIn_Id4PploH-kCcZNRwwkjb4teybUNWN7gbdpM3wImW-N2ht2E0_Tk8_LfFUCIFpQLtlqsjpXVtpSFZ3_BsKoKJfdcJonf4A2v-Zlv7vX7rGnRt_ggYWoLn_hdV-A"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Bas aspaz: Berdaq Amanov</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-snug">"Hár bir porciya ata-babalarımız dástúrleri tiykarında jańadan pisiriledi."</span>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Luxury Sticky Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-2xl p-4 shadow-[0_-8px_30px_rgba(0,0,0,0.6)]">
+<div class="max-w-md mx-auto flex items-center gap-3">
+<!-- Quantity Selector Pill -->
+<div class="flex items-center bg-surface-container-high rounded-full p-1 shadow-md">
+<button aria-label="Kemeytiw" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90 hover:text-primary transition-transform" id="qty-minus">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-title-md text-title-md text-on-surface px-3 min-w-[28px] text-center select-none" id="qty-display">1</span>
+<button aria-label="Kóbeytiw" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90 hover:text-primary transition-transform" id="qty-plus">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Add to Cart CTA Button -->
+<button class="flex-1 bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg py-3.5 px-4 rounded-full flex items-center justify-between shadow-xl shadow-primary/25 transition-all active:scale-[0.98]" id="add-to-cart-btn">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span>Sebetke qosıw</span>
+</span>
+<span class="font-bold tracking-tight" id="total-price-display">99 000 som</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+(function() {
+  const BASE_PRICE = 85000;
+  let quantity = 1;
+  let isFavorite = false;
+
+  const qtyDisplay = document.getElementById('qty-display');
+  const totalPriceDisplay = document.getElementById('total-price-display');
+  const minusBtn = document.getElementById('qty-minus');
+  const plusBtn = document.getElementById('qty-plus');
+  const addToCartBtn = document.getElementById('add-to-cart-btn');
+  const favoriteBtn = document.getElementById('favorite-btn');
+  const favoriteIcon = document.getElementById('favorite-icon');
+  const checkboxes = document.querySelectorAll('.addon-checkbox');
+
+  function calculateTotal() {
+    let addonsTotal = 0;
+    checkboxes.forEach(cb => {
+      if (cb.checked) {
+        addonsTotal += parseInt(cb.getAttribute('data-price') || '0', 10);
+      }
+    });
+    const total = (BASE_PRICE + addonsTotal) * quantity;
+    totalPriceDisplay.textContent = total.toLocaleString('uz-UZ').replace(/,/g, ' ') + " som";
+  }
+
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', (e) => {
+      const parent = cb.closest('.addon-item');
+      const checkmark = parent.querySelector('.checkmark');
+      if (cb.checked) {
+        checkmark.classList.remove('opacity-0');
+        checkmark.classList.add('opacity-100');
+      } else {
+        checkmark.classList.remove('opacity-100');
+        checkmark.classList.add('opacity-0');
+      }
+      calculateTotal();
+    });
+  });
+
+  minusBtn.addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      qtyDisplay.textContent = quantity;
+      calculateTotal();
+    }
+  });
+
+  plusBtn.addEventListener('click', () => {
+    if (quantity < 20) {
+      quantity++;
+      qtyDisplay.textContent = quantity;
+      calculateTotal();
+    }
+  });
+
+  favoriteBtn.addEventListener('click', () => {
+    isFavorite = !isFavorite;
+    if (isFavorite) {
+      favoriteIcon.textContent = 'favorite';
+      favoriteIcon.style.fontVariationSettings = "'FILL' 1";
+      favoriteBtn.classList.add('text-error');
+    } else {
+      favoriteIcon.textContent = 'favorite_border';
+      favoriteIcon.style.fontVariationSettings = "'FILL' 0";
+      favoriteBtn.classList.remove('text-error');
+    }
+  });
+
+  addToCartBtn.addEventListener('click', () => {
+    const originalText = addToCartBtn.innerHTML;
+    addToCartBtn.innerHTML = `
+      <span class="w-full flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined text-[20px] animate-bounce">check_circle</span>
+        <span>Sebetke qosıldı!</span>
+      </span>
+    `;
+    setTimeout(() => {
+      addToCartBtn.innerHTML = originalText;
+    }, 1500);
+  });
+
+  calculateTotal();
+})();
+</script></main></body></html>

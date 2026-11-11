@@ -1,0 +1,13 @@
+{
+  "name": "qaraqalpagim-restaurant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Qaraqalpaq asxanası ushın responsive web hám admin panel",
+  "scripts": {
+    "dev": "node tools/server.mjs",
+    "build": "node tools/build.mjs",
+    "preview": "node tools/server.mjs dist",
+    "test": "node tools/test.mjs"
+  },
+  "devDependencies": {}
+}
